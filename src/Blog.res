@@ -101,7 +101,7 @@ module BlogCard = {
             <Badge badge />
           </div>
         }}
-        <Link href="/blog/[slug]" _as={"/blog/" ++ slug}>
+        <Link href="/blog/[slug]" _as={"/blog/" ++ slug} legacyBehavior=true>
           <a className="relative hl-title block mb-4 pt-9/16">
             {
               let className = "absolute top-0 h-full w-full object-cover"
@@ -114,7 +114,7 @@ module BlogCard = {
         </Link>
       </div>
       <div className="px-2">
-        <Link href="/blog/[slug]" _as={"/blog/" ++ slug}>
+        <Link href="/blog/[slug]" _as={"/blog/" ++ slug} legacyBehavior=true>
           <a>
             <h2 className="hl-4"> {React.string(title)} </h2>
           </a>
@@ -157,7 +157,7 @@ module FeatureCard = {
           ~maxHeight="25.4375rem",
           (),
         )}>
-        <Link href="/blog/[slug]" _as={"/blog/" ++ slug}>
+        <Link href="/blog/[slug]" _as={"/blog/" ++ slug} legacyBehavior=true>
           <a className="relative block pt-2/3">
             {switch badge {
             | Some(badge) =>
@@ -205,7 +205,7 @@ module FeatureCard = {
             <p className="body-md text-gray-70"> {React.string(firstParagraph)} </p>
           </div>
         </div>
-        <Link href="/blog/[slug]" _as={"/blog/" ++ slug}>
+        <Link href="/blog/[slug]" _as={"/blog/" ++ slug} legacyBehavior=true>
           <a>
             <Button> {React.string("Read Article")} </Button>
           </a>

@@ -61,6 +61,7 @@ module Link: {
     ~shallow: option<bool>=?,
     ~passHref: option<bool>=?,
     ~children: React.element,
+    ~legacyBehavior: option<bool>=?,
   ) => React.element
 }
 

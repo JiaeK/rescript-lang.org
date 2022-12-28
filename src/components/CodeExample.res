@@ -230,7 +230,9 @@ module Toggle = {
       | Some({code: ""}) => React.null
       | Some(tab) =>
         let playgroundLinkButton =
-          <Next.Link href={`/try?code=${LzString.compressToEncodedURIComponent(tab.code)}}`}>
+          <Next.Link
+            href={`/try?code=${LzString.compressToEncodedURIComponent(tab.code)}}`}
+            legacyBehavior=true>
             <a target="_blank">
               // ICON Link to PLAYGROUND
               <Icon.ExternalLink

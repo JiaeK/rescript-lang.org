@@ -142,7 +142,7 @@ module DocsSection = {
       if isAbsolute {
         <a href rel="noopener noreferrer" className=""> content </a>
       } else {
-        <Next.Link href>
+        <Next.Link href legacyBehavior=true>
           <a className=""> content </a>
         </Next.Link>
       }
@@ -232,7 +232,7 @@ module DocsSection = {
 
                 <li key=text>
                   <span className="text-fire mr-2"> {React.string(`-`)} </span>
-                  <Link href>
+                  <Link href legacyBehavior=true>
                     <a className=linkClass> {React.string(text)} </a>
                   </Link>
                 </li>
@@ -380,14 +380,14 @@ module MobileNav = {
           <DocSearch.Textbox id="docsearch-mobile" />
         </li>
         <li className=base>
-          <Link href="/try">
+          <Link href="/try" legacyBehavior=true>
             <a className={linkOrActiveLink(~target="/try", ~route)}>
               {React.string("Playground")}
             </a>
           </Link>
         </li>
         <li className=base>
-          <Link href="/blog">
+          <Link href="/blog" legacyBehavior=true>
             <a className={linkOrActiveLinkSubroute(~target="/blog", ~route)}>
               {React.string("Blog")}
             </a>
@@ -395,7 +395,7 @@ module MobileNav = {
         </li>
         /*
          <li className=base>
-           <Link href="/community">
+           <Link href="/community" legacyBehavior=true>
              <a className={linkOrActiveLink(~target="/community", ~route)}>
                {React.string("Community")}
              </a>
@@ -546,21 +546,21 @@ let make = (~fixed=true, ~overlayState: (bool, (bool => bool) => unit)) => {
             className="flex ml-10 space-x-5 w-full max-w-320"
             style={ReactDOMStyle.make(~maxWidth="26rem", ())}>
             {collapsibleElements->React.array}
-            <Link href="/docs/manual/latest/api">
+            <Link href="/docs/manual/latest/api" legacyBehavior=true>
               <a className={linkOrActiveApiSubroute(~route)}> {React.string("API")} </a>
             </Link>
-            <Link href="/try">
+            <Link href="/try" legacyBehavior=true>
               <a className={"hidden xs:block " ++ linkOrActiveLink(~target="/try", ~route)}>
                 {React.string("Playground")}
               </a>
             </Link>
-            <Link href="/blog">
+            <Link href="/blog" legacyBehavior=true>
               <a
                 className={"hidden xs:block " ++ linkOrActiveLinkSubroute(~target="/blog", ~route)}>
                 {React.string("Blog")}
               </a>
             </Link>
-            <Link href="/community">
+            <Link href="/community" legacyBehavior=true>
               <a className={"hidden xs:block " ++ linkOrActiveLink(~target="/community", ~route)}>
                 {React.string("Community")}
               </a>

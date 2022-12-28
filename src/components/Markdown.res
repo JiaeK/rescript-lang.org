@@ -94,7 +94,7 @@ module UrlBox = {
         <Icon.ArrowRight className="ml-1" />
       </a>
     } else {
-      <Next.Link href>
+      <Next.Link href legacyBehavior=true>
         <a className="flex items-center">
           {React.string(text)}
           <Icon.ArrowRight className="ml-1" />
@@ -413,7 +413,7 @@ module A = {
       | [pathname] => Js.String2.replaceByRe(pathname, regex, "")
       | _ => href
       }
-      <Next.Link href>
+      <Next.Link href legacyBehavior=true>
         <a
           href rel="noopener noreferrer" className="no-underline text-fire hover:underline" ?target>
           children

@@ -31,7 +31,7 @@ module Toc = {
     <ul className="mt-3 py-1 mb-4 border-l border-fire-10">
       {Belt.Array.map(entries, ({header, href}) =>
         <li key=header className="pl-2 mt-2 first:mt-1">
-          <Link href>
+          <Link href legacyBehavior=true>
             <a className="font-normal block text-14 text-gray-40 leading-tight hover:text-gray-80">
               {//links, nested
               React.string(header)}
@@ -78,7 +78,7 @@ module Sidebar = {
           }
 
           <li key=m.name className={hidden ++ " mt-1 leading-4"}>
-            <Link href=m.href>
+            <Link href=m.href legacyBehavior=true>
               <a
                 className={"truncate block py-1 md:h-auto tracking-tight text-gray-60 rounded-sm hover:bg-gray-20 hover:-ml-2 hover:py-1 hover:pl-2 " ++
                 active}>
@@ -183,7 +183,7 @@ module BreadCrumbs = {
         let item = if i === Belt.List.length(crumbs) - 1 {
           <span key={Belt.Int.toString(i)}> {React.string(crumb.name)} </span>
         } else {
-          <Link key={Belt.Int.toString(i)} href=crumb.href>
+          <Link key={Belt.Int.toString(i)} href=crumb.href legacyBehavior=true>
             <a> {React.string(crumb.name)} </a>
           </Link>
         }
@@ -272,7 +272,7 @@ let make = (
     | i =>
       let previous = switch items->Belt.Array.get(i - 1) {
       | Some({name, href}) =>
-        <Link href>
+        <Link href legacyBehavior=true>
           <a
             className={"flex items-center text-fire hover:text-fire-70 border-2 border-red-300 rounded py-1.5 px-3"}>
             <Icon.ArrowRight className={"rotate-180 mr-2"} />
@@ -283,7 +283,7 @@ let make = (
       }
       let next = switch items->Belt.Array.get(i + 1) {
       | Some({name, href}) =>
-        <Link href>
+        <Link href legacyBehavior=true>
           <a
             className={"flex items-center text-fire hover:text-fire-70 ml-auto border-2 border-red-300 rounded py-1.5 px-3"}>
             {React.string(name)}
