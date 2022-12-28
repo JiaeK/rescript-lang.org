@@ -9,7 +9,7 @@ const fs = require("fs");
 const transpileModules = ["rescript"].concat(bsconfig["bs-dependencies"]);
 const withTM = require("next-transpile-modules")(transpileModules);
 
-const withMdx = require("./plugins/next-mdx")({
+const withMdx = require("@next/mdx")({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [remarkSlug],
