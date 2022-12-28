@@ -32,7 +32,7 @@ function useEsbuildMinify(config, options) {
 
 const isWebpack5 = true;
 const config = {
-  target: "serverless",
+  //target: "serverless",
   pageExtensions: ["jsx", "js", "bs.js", "mdx", "mjs"],
   env: {
     ENV: process.env.NODE_ENV,
