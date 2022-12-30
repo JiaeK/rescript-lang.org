@@ -1,8 +1,8 @@
-const { getOptions } = require("loader-utils");
-const mdx = require("@mdx-js/mdx");
-const matter = require("gray-matter");
-const stringifyObject = require("stringify-object");
-const path = require("path");
+import { getOptions } from "loader-utils"
+import mdx from "@mdx-js/mdx"
+import matter from "gray-matter"
+import stringifyObject from "stringify-object"
+import path from "path"
 
 const DEFAULT_RENDERER = `
 import React from 'react'

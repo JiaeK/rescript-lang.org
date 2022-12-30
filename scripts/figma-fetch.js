@@ -24,10 +24,10 @@ const TEAM_ID = '977136127691894995';
 // https://www.figma.com/file/<file key>/Some-Name?node-id=182%3A0
 const FILE_KEY = 'FsQT67sVviqPXhYoTbpfIb';
 
-const fetch = require('node-fetch');
-const fs = require('fs');
-const { promisify } = require('util');
-const path = require('path');
+import fetch from 'node-fetch'
+import fs from 'fs'
+import { promisify } from 'util'
+import path from 'path'
 
 const writeFile = promisify(fs.writeFile);
 

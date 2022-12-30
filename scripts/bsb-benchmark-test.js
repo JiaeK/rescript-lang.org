@@ -19,9 +19,9 @@
  * to NodeJS > v12
  */
 
-const path = require("path");
-const child_process = require("child_process");
-const bsconfig = require(path.join(process.cwd(), "bsconfig.json"));
+import path from "path"
+import child_process from "child_process"
+import bsconfig from path.join(process.cwd(), "bsconfig.json")
 
 const BSB_BIN = "./node_modules/.bin/bsb";
 

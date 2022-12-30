@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Patrick Ecker <ryyppy@users.noreply.github.com>",
   "license": "MIT",
+  "type": "module",
   "engines": {
     "node": "16.x"
   },
